@@ -50,7 +50,8 @@ export default function SignUpScreen({ navigation }) {
       />
  
       <TouchableOpacity
-        style={styles.button}
+        style={[styles.button, (!name || !email || !password) && styles.buttonDisabled]}
+        disabled={!name || !email || !password}
         onPress={() => navigation.navigate('UserType')}
       >
         <Text style={styles.buttonText}>Continue</Text>
@@ -126,6 +127,9 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: '500',
+  },
+  buttonDisabled: {
+    backgroundColor: '#AFA9EC',
   },
   loginPrompt: {
     textAlign: 'center',
