@@ -3,6 +3,7 @@ import Svg, { Path, Circle } from 'react-native-svg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SignUpScreen from './screens/SignupScreen';
+import UserTypeScreen from './screens/UserTypeScreen';
  
 function CuroLogo() {
   return (
@@ -65,6 +66,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="UserType" component={UserTypeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
